@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,34 +7,27 @@
 </head>
 
 <body>
-<p><img src="../img/logo.png" width="238" height="122" /></p>
-<table width="796" border="1">
-  <tr>
-    <td bgcolor="#CCCCCC"><label>
-      <div align="center">
-        <input type="submit" name="button" id="button" value="INICIO" />
-        </div>
-    </label></td>
-    <td bgcolor="#CCCCCC"><label>
-      <div align="center">
-        <input type="submit" name="button2" id="button2" value="COMPRAR" />
-        </div>
-    </label></td>
-    <td bgcolor="#CCCCCC"><label>
-      <div align="center">
-        <input type="submit" name="button3" id="button3" value="VENDER" />
-        </div>
-    </label></td>
-    <td bgcolor="#CCCCCC"><label>
-      <div align="center">
-        <input type="submit" name="button4" id="button4" value="LOGIN" />
-        </div>
-    </label></td>
-  </tr>
-  <tr>
-    <td colspan="4"><img src="../img/comic.png" width="1147" height="646" /></td>
-  </tr>
-</table>
-<p>&nbsp;</p>
+<form id="form1" name="form1" method="post" action="">
+  NOMBRE: 
+  <label>
+  <input type="text" name="nombre" id="nombre" />
+  </label>
+  <p>IMAGEN:
+    <label>
+    <input type="submit" name="imagen" id="imagen" value="Enviar" />
+    </label>
+  </p>
+  <p>FECHA PUBLICACION: 
+    <label>
+    <input type="date" name="fecha" id="fecha" />
+    </label>
+  </p>
+  <p>FECHA RESTAURACION: 
+    <label>
+    <input type="date" name="restauración" id="restauración" />
+    </label>
+  </p>
+</form>
+
 </body>
 </html>

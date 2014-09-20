@@ -1,4 +1,4 @@
-package mundo;
+package com.comicsLand.mundo;
 
 public class Sesion {
 //-----------------------

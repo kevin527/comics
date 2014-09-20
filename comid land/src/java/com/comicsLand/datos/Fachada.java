@@ -3,6 +3,8 @@ package com.comicsLand.datos;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,19 +22,27 @@ public class Fachada {
         usuario = "";
         servidor = "";
         password = "";
+        GetConnection();
     }
 
-    public Connection GetConnection() throws ClassNotFoundException, SQLException {
+    public Connection GetConnection() {
 
-        Class.forName("com.mysql.jdbc.Driver");
-        servidor = "jdbc:mysql://localhost/tiendac";
-        usuario = "root";
-        password = "";
-        conexion = DriverManager.getConnection(servidor, usuario, password);
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            servidor = "jdbc:mysql://localhost/tienda";
+            usuario = "root";
+            password = "mysql";
+            conexion = DriverManager.getConnection(servidor, usuario, password);
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Fachada.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Fachada.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return conexion;
     }
 
-    public void desconectar() throws SQLException {
-        conexion.close();
+    public void desconectar(Connection c) throws SQLException {
+        c.close();
     }
 }

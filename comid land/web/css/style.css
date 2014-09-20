@@ -1,0 +1,68 @@
+/* estilo pagina de inicio */
+
+#header
+{
+    width: 950px;
+    height: 90px;
+    margin: 0 auto 0;
+    padding-top: 9px;
+    
+}
+
+#logo
+{
+    width: 220px;
+    height: 51px;
+    float: left;
+}
+
+#aval
+{
+    width: 93px;
+    height: 33px;
+    float: right;
+    margin-top: 20px;
+}
+#nav
+{
+    background: #003e75 url(../img/fondo.jpg) repeat top;
+               
+    width: 950px;
+    height: 42px;
+    margin: 0 auto 0;
+    padding: 0;
+    clear: both;
+    margin-top:20px;
+}
+ 
+#nav ul 
+{
+    width: 950px;
+    float: left;
+    list-style: none;
+    margin: 0;
+}
+
+#nav ul li
+{
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li a
+{
+    
+display: block;
+font-family: Arial;
+font-size: 12px;
+color: #fff;
+text-decoration: none;
+position: relative;
+height: 25px;
+background: url('../img/sep.png') no-repeat right top;
+padding: 7px 10px 0px 10px;
+text-align: center;
+
+}
